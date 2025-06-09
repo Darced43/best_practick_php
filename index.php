@@ -33,5 +33,17 @@ function isPalindrome(string $str): bool {
   return strrev(strtolower($str)) == strtolower($str);
 }
 
+// 3) сортировка массива по длинне 
+
+function sortByLength (array $toSort) {
+    usort($toSort, fn($a, $b) => 
+       strlen($a) <=> strlen($b)
+    );
+    
+    return$toSort;
+}
+
+
+sortByLength(["Beg", "Life", "I", "To"]);
 
 ?>
